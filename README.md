@@ -1,2 +1,2 @@
 # PyxidaAuebScrapper
-A web scrapper to easily extract links from the Pyxida Depository. The urls extracted contain MSc and PhD theses, from the Information Department of AUEB, in ".pdf" format.
+A web scrapper to easily extract links from the Pyxida Institutional Repository. The urls extracted contain MSc and PhD theses, in ".pdf" format, from the Informatics Department of AUEB.
