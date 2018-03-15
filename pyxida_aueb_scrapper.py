@@ -12,7 +12,6 @@ department = 1  # Τμήμα Πληροφορικής / Department of Informatic
 # department = 6  # Τμήμα Διοικητικής Επιστήμης και Τεχνολογίας / Department of Management Science and Technology
 # department = 7  # Τμήμα Οικονομικής Επιστήμης / Department of Economics
 # department = 8  # Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών / Department of International and European Economic Studies
-# import pandas as pd
 
 PhDOrMSc = 'phd'
 # PhDOrMSc = 'msc'
