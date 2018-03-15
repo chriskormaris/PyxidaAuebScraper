@@ -1,6 +1,5 @@
 import bs4 as bs
 import urllib.request
-# import pandas as pd
 
 
 prefix_url = 'http://www.pyxida.aueb.gr/'
@@ -13,6 +12,7 @@ department = 1  # Τμήμα Πληροφορικής / Department of Informatic
 # department = 6  # Τμήμα Διοικητικής Επιστήμης και Τεχνολογίας / Department of Management Science and Technology
 # department = 7  # Τμήμα Οικονομικής Επιστήμης / Department of Economics
 # department = 8  # Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών / Department of International and European Economic Studies
+# import pandas as pd
 
 PhDOrMSc = 'phd'
 # PhDOrMSc = 'msc'
@@ -21,13 +21,15 @@ if department == 1:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=3&page='
-        filename = 'department1_phd_theses_links.txt'
+        filename = 'di_phd_theses_links.txt'
+        pdfnames_file = 'di_phd_theses_filenames.txt'
         filename_of_authors = 'di_phd_theses_authors.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=1890&pid=2&page='
         filename = 'di_msc_theses_links.txt'
+        pdfnames_file = 'di_msc_theses_filenames.txt'
         filename_of_authors = 'di_msc_theses_authors.txt'
         pages = 33
 elif department == 2:
@@ -35,25 +37,29 @@ elif department == 2:
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=26&page'
         filename = 'ds_phd_theses_links.txt'
+        pdfnames_file = 'ds_phd_theses_filenames.txt'
         filename_of_authors = 'di_phd_theses_authors.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=26&page='
-        filename = 'dba_msc_theses_links.txt'
-        filename_of_authors = 'dba_msc_theses_authors.txt'
+        filename = 'ds_msc_theses_links.txt'
+        pdfnames_file = 'ds_msc_theses_filenames.txt'
+        filename_of_authors = 'ds_msc_theses_authors.txt'
         pages = 32
 elif department == 3:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=21&page='
         filename = 'dba_phd_theses_links.txt'
+        pdfnames_file = 'dba_phd_theses_filenames.txt'
         filename_of_authors = 'dba_phd_theses_authors.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=21&page='
         filename = 'dba_msc_theses_links.txt'
+        pdfnames_file = 'dba_msc_theses_filenames.txt'
         filename_of_authors = 'dba_msc_theses_authors.txt'
         pages = 15
 elif department == 4:
@@ -61,12 +67,14 @@ elif department == 4:
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=23&page='
         filename = 'daf_phd_theses_links.txt'
+        pdfnames_file = 'deaf_phd_theses_filenames.txt'
         filename_of_authors = 'daf_phd_theses_authors.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=23&page='
         filename = 'daf_msc_theses_links.txt'
+        pdfnames_file = 'daf_msc_theses_filenames.txt'
         filename_of_authors = 'daf_msc_theses_authors.txt'
         pages = 17
 elif department == 5:
@@ -74,12 +82,14 @@ elif department == 5:
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=24&page='
         filename = 'dmc_phd_theses_links.txt'
+        pdfnames_file = 'dmc_phd_theses_filenames.txt'
         filename_of_authors = 'dmc_phd_theses_authors.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=24&page='
         filename = 'dmc_msc_theses_links.txt'
+        pdfnames_file = 'dmc_msc_theses_filenames.txt'
         filename_of_authors = 'dmc_msc_theses_authors.txt'
         pages = 15
 elif department == 6:
@@ -87,12 +97,14 @@ elif department == 6:
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=25&page='
         filename = 'dmst_phd_theses_links.txt'
+        pdfnames_file = 'dmst_phd_theses_filenames.txt'
         filename_of_authors = 'dmst_phd_theses_authors.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=25&page='
         filename = 'dmst_msc_theses_links.txt'
+        pdfnames_file = 'dmst_msc_theses_filenames.txt'
         filename_of_authors = 'dmst_msc_theses_authors.txt'
         pages = 3
 elif department == 7:
@@ -100,12 +112,14 @@ elif department == 7:
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=3&page='
         filename = 'de_phd_theses_links.txt'
+        pdfnames_file = 'de_phd_theses_filenames.txt'
         filename_of_authors = 'de_phd_theses_authors.txt'
         pages = 2
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=20&page='
         filename = 'de_msc_theses_links.txt'
+        pdfnames_file = 'de_msc_theses_filenames.txt'
         filename_of_authors = 'de_msc_theses_authors.txt'
         pages = 39
 else:
@@ -113,12 +127,14 @@ else:
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=22&page='
         filename = 'diees_phd_theses_links.txt'
+        pdfnames_file = 'diees_phd_theses_filenames.txt'
         filename_of_authors = 'diees_phd_theses_authors.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=22&page='
         filename = 'diees_msc_theses_links.txt'
+        pdfnames_file = 'diees_msc_theses_filenames.txt'
         filename_of_authors = 'diees_msc_theses_authors.txt'
         pages = 20
 
@@ -145,6 +161,7 @@ for i in range(1, pages + 1):
 
 pdf_links = []
 authors = []
+pdf_filenames = []
 
 for link in thesis_links:
     source = urllib.request.urlopen(link).read()
@@ -166,24 +183,14 @@ for link in thesis_links:
         authors.append(row[0])
         print(row[0])
 
-    # ALTERNATIVE, VERY SLOW
-    '''
-    dfs = pd.read_html(link, header=0)
-    creator = dfs[4].columns.get_values()
-    if 'δημιουργός' in creator[0].lower():
-        authors.append(creator[1])
-        print(creator[1])
-    else:
-        creator = dfs[5].columns.get_values()
-        authors.append(creator[1])
-        print(creator[1])
-    '''
-
     # get the ".pdf" link
     for url in (soup.find_all('a')):
         if 'pdf' in url.get('href').lower():
             pdf_links.append(prefix_url + url.get('href'))
             print(prefix_url + url.get('href'))
+
+            pdf_filenames.append(url.contents[0])
+
 
 print('')
 print('Writing to file...')
@@ -191,8 +198,16 @@ print('Writing to file...')
 file = open(filename, 'w')
 for pdf_link in pdf_links:
     file.write("%s\n" % pdf_link)
+file.close()
+
+# write list of ".pdf" filenames to file
+file = open(pdfnames_file, 'w')
+for pdf_filename in pdf_filenames:
+    file.write("%s\n" % pdf_filename)
+file.close()
 
 # write list of author names to file
 file = open(filename_of_authors, 'w')
 for author in authors:
     file.write("%s\n" % author)
+file.close()
