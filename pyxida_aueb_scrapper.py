@@ -2,10 +2,12 @@ import bs4 as bs
 import urllib.request
 
 
+__author__ = 'c.kormaris'
+
 prefix_url = 'http://www.pyxida.aueb.gr/'
 
 department = 1  # Τμήμα Πληροφορικής / Department of Informatics
-# department = 2  # Τμήμα Στατιστικής / Department of Statistics (652)
+# department = 2  # Τμήμα Στατιστικής / Department of Statistics
 # department = 3  # Τμήμα Οργάνωσης και Διοίκησης Επιχειρήσεων / Department of Business Administration
 # department = 4  # Τμήμα Λογιστικής και Χρηματοοικονομικής / Department of Accounting and Finance
 # department = 5  # Τμήμα Επικοινωνίας και Μάρκετινγκ / Department of Marketing and Communication
@@ -13,8 +15,8 @@ department = 1  # Τμήμα Πληροφορικής / Department of Informatic
 # department = 7  # Τμήμα Οικονομικής Επιστήμης / Department of Economics
 # department = 8  # Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών / Department of International and European Economic Studies
 
-PhDOrMSc = 'phd'
-# PhDOrMSc = 'msc'
+# PhDOrMSc = 'phd'
+PhDOrMSc = 'msc'
 
 if department == 1:
     if PhDOrMSc.lower() == 'phd':
