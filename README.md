@@ -3,3 +3,20 @@ A web scrapper to easily extract links from the Pyxida Institutional Repository.
 
 Visit:
 [http://www.pyxida.aueb.gr](http://www.pyxida.aueb.gr)
+
+
+## How to run
+
+
+Step 1
+Run:
+```python
+python pyxida_aueb_scrapper.py
+```
+
+Step 2
+Run:
+```python
+python pyxida_aueb_downloader.py
+```
+
