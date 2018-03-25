@@ -22,7 +22,7 @@ python pyxida_aueb_downloader.py
 
 ## GUI
 
-You can simply open and run the GUI for application:
+You can simply open and run the GUI application:
 Run:
 ```python
 python pyxida_gui.py
