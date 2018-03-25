@@ -20,3 +20,13 @@ Run:
 python pyxida_aueb_downloader.py
 ```
 
+## GUI
+
+You can simply open and run the GUI for application:
+Run:
+```python
+python pyxida_gui.py
+```
+
+Now, you can download the theses you want easily!
+

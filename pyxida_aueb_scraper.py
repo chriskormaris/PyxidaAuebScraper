@@ -1,12 +1,23 @@
-import bs4 as bs
+# -*- coding: utf-8 -*-
+
 import urllib.request
+import bs4 as bs
+import sys
 
 
 __author__ = 'c.kormaris'
 
 prefix_url = 'http://www.pyxida.aueb.gr/'
 
-department = 1  # Τμήμα Πληροφορικής / Department of Informatics
+department = -1
+PhDOrMSc = -1
+try:
+    department = int(sys.argv[1])
+    PhDOrMSc = sys.argv[2]
+except IndexError:
+    print('Usage: python pyxida_aueb_scraper.py department_number PhDOrMSc')
+
+# department = 1  # Τμήμα Πληροφορικής / Department of Informatics
 # department = 2  # Τμήμα Στατιστικής / Department of Statistics
 # department = 3  # Τμήμα Οργάνωσης και Διοίκησης Επιχειρήσεων / Department of Business Administration
 # department = 4  # Τμήμα Λογιστικής και Χρηματοοικονομικής / Department of Accounting and Finance
@@ -16,7 +27,7 @@ department = 1  # Τμήμα Πληροφορικής / Department of Informatic
 # department = 8  # Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών / Department of International and European Economic Studies
 
 # PhDOrMSc = 'phd'
-PhDOrMSc = 'msc'
+# PhDOrMSc = 'msc'
 
 if department == 1:
     if PhDOrMSc.lower() == 'phd':
@@ -242,3 +253,5 @@ file = open(authors_file, 'w')
 for author in authors:
     file.write("%s\n" % author)
 file.close()
+print('DONE')
+

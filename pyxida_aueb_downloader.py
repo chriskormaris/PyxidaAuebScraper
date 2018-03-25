@@ -1,9 +1,21 @@
+# -*- coding: utf-8 -*-
+
 import urllib.request
+import sys
 import os
 
 __author__ = 'c.kormaris'
 
-department = 1  # Τμήμα Πληροφορικής / Department of Informatics
+department = -1
+PhDOrMSc = -1
+try:
+    department = int(sys.argv[1])
+    PhDOrMSc = sys.argv[2]
+except IndexError:
+    print('Usage: python pyxida_aueb_downloader.py department_number PhDOrMSc')
+
+
+# department = 1  # Τμήμα Πληροφορικής / Department of Informatics
 # department = 2  # Τμήμα Στατιστικής / Department of Statistics
 # department = 3  # Τμήμα Οργάνωσης και Διοίκησης Επιχειρήσεων / Department of Business Administration
 # department = 4  # Τμήμα Λογιστικής και Χρηματοοικονομικής / Department of Accounting and Finance
@@ -13,7 +25,7 @@ department = 1  # Τμήμα Πληροφορικής / Department of Informatic
 # department = 8  # Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών / Department of International and European Economic Studies
 
 # PhDOrMSc = 'phd'
-PhDOrMSc = 'msc'
+# PhDOrMSc = 'msc'
 
 if department == 1:
     if PhDOrMSc.lower() == 'phd':
@@ -73,3 +85,6 @@ for i, pdf_link in enumerate(pdf_links):
     # id = pdf_link.split('iid:')[1].split('&')[0]
     urllib.request.urlretrieve(pdf_link, filename=name + '/' + pdf_filenames[i])
     print(pdf_filenames[i])
+
+print('DONE')
+
