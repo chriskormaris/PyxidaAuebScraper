@@ -24,11 +24,11 @@ python pyxida_aueb_downloader.py
 
 ![screenshot](screenshot.png)
 
-You can simply open and run the GUI application:
+You can simply open and run the GUI application.
 Run:
 ```python
 python pyxida_gui.py
 ```
 
-Now, you can download the theses you want easily!
+Now, you can download all the theses you want easily!
 
