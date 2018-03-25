@@ -22,6 +22,8 @@ python pyxida_aueb_downloader.py
 
 ## GUI
 
+![screenshot](screenshot.png)
+
 You can simply open and run the GUI application:
 Run:
 ```python

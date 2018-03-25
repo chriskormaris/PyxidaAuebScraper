@@ -47,7 +47,7 @@ def run_scraper():
     print('Running ' + python_script + '...')
     # os.environ('PATH')
     os.system('python ' + python_script + ' ' + arguments)
-	print('')
+    print('')
 
 
 def run_downloader():
@@ -60,7 +60,7 @@ def run_downloader():
     print('Running ' + python_script + '...')
     # os.environ('PATH')
     os.system('python ' + python_script + ' ' + arguments)
-	print('')
+    print('')
 
 
 def about_window():
