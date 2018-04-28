@@ -10,13 +10,13 @@ Visit:
 
 **Step 1**
 Run:
-```python
+```bash
 python pyxida_aueb_scraper.py
 ```
 
 **Step 2**
 Run:
-```python
+```bash
 python pyxida_aueb_downloader.py
 ```
 
@@ -26,9 +26,17 @@ python pyxida_aueb_downloader.py
 
 You can simply open and run the GUI application.
 Run:
-```python
+```bash
 python pyxida_gui.py
 ```
 
+or
+
+You to make an executable file for the gui, run:
+```bash
+pip install pyinstaller
+pyinstaller pyxida_gui.spec
+```
+And then run the created file "pyxida_gui.exe"!
 Now, you can download all the theses you want easily!
 
