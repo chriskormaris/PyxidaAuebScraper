@@ -33,137 +33,137 @@ if department == 1:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=3&page='
-        links_file = 'di_phd_theses_links.txt'
-        pdfs_file = 'di_phd_theses_filenames.txt'
-        authors_file = 'di_phd_theses_authors.txt'
-        titles_file = 'di_phd_theses_titles.txt'
+        links_file = 'di_phd_dissertations_links.txt'
+        pdfs_file = 'di_phd_dissertations_filenames.txt'
+        authors_file = 'di_phd_dissertations_authors.txt'
+        titles_file = 'di_phd_dissertations_titles.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=1890&pid=2&page='
-        links_file = 'di_msc_theses_links.txt'
-        pdfs_file = 'di_msc_theses_filenames.txt'
-        authors_file = 'di_msc_theses_authors.txt'
-        titles_file = 'di_msc_theses_titles.txt'
+        links_file = 'di_msc_dissertations_links.txt'
+        pdfs_file = 'di_msc_dissertations_filenames.txt'
+        authors_file = 'di_msc_dissertations_authors.txt'
+        titles_file = 'di_msc_dissertations_titles.txt'
         pages = 33
 elif department == 2:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=26&page'
-        links_file = 'ds_phd_theses_links.txt'
-        pdfs_file = 'ds_phd_theses_filenames.txt'
-        authors_file = 'ds_phd_theses_authors.txt'
-        titles_file = 'ds_phd_theses_titles.txt'
+        links_file = 'ds_phd_dissertations_links.txt'
+        pdfs_file = 'ds_phd_dissertations_filenames.txt'
+        authors_file = 'ds_phd_dissertations_authors.txt'
+        titles_file = 'ds_phd_dissertations_titles.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=26&page='
-        links_file = 'ds_msc_theses_links.txt'
-        pdfs_file = 'ds_msc_theses_filenames.txt'
-        authors_file = 'ds_msc_theses_authors.txt'
-        titles_file = 'ds_msc_theses_titles.txt'
+        links_file = 'ds_msc_dissertations_links.txt'
+        pdfs_file = 'ds_msc_dissertations_filenames.txt'
+        authors_file = 'ds_msc_dissertations_authors.txt'
+        titles_file = 'ds_msc_dissertations_titles.txt'
         pages = 32
 elif department == 3:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=21&page='
-        links_file = 'dba_phd_theses_links.txt'
-        pdfs_file = 'dba_phd_theses_filenames.txt'
-        authors_file = 'dba_phd_theses_authors.txt'
-        titles_file = 'dba_phd_theses_titles.txt'
+        links_file = 'dba_phd_dissertations_links.txt'
+        pdfs_file = 'dba_phd_dissertations_filenames.txt'
+        authors_file = 'dba_phd_dissertations_authors.txt'
+        titles_file = 'dba_phd_dissertations_titles.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=21&page='
-        links_file = 'dba_msc_theses_links.txt'
-        pdfs_file = 'dba_msc_theses_filenames.txt'
-        authors_file = 'dba_msc_theses_authors.txt'
-        titles_file = 'dba_msc_theses_titles.txt'
+        links_file = 'dba_msc_dissertations_links.txt'
+        pdfs_file = 'dba_msc_dissertations_filenames.txt'
+        authors_file = 'dba_msc_dissertations_authors.txt'
+        titles_file = 'dba_msc_dissertations_titles.txt'
         pages = 15
 elif department == 4:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=23&page='
-        links_file = 'daf_phd_theses_links.txt'
-        pdfs_file = 'daf_phd_theses_filenames.txt'
-        authors_file = 'daf_phd_theses_authors.txt'
-        titles_file = 'daf_phd_theses_titles.txt'
+        links_file = 'daf_phd_dissertations_links.txt'
+        pdfs_file = 'daf_phd_dissertations_filenames.txt'
+        authors_file = 'daf_phd_dissertations_authors.txt'
+        titles_file = 'daf_phd_dissertations_titles.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=23&page='
-        links_file = 'daf_msc_theses_links.txt'
-        pdfs_file = 'daf_msc_theses_filenames.txt'
-        authors_file = 'daf_msc_theses_authors.txt'
-        titles_file = 'daf_msc_theses_titles.txt'
+        links_file = 'daf_msc_dissertations_links.txt'
+        pdfs_file = 'daf_msc_dissertations_filenames.txt'
+        authors_file = 'daf_msc_dissertations_authors.txt'
+        titles_file = 'daf_msc_dissertations_titles.txt'
         pages = 17
 elif department == 5:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=24&page='
-        links_file = 'dmc_phd_theses_links.txt'
-        pdfs_file = 'dmc_phd_theses_filenames.txt'
-        authors_file = 'dmc_phd_theses_authors.txt'
-        titles_file = 'dmc_phd_theses_titles.txt'
+        links_file = 'dmc_phd_dissertations_links.txt'
+        pdfs_file = 'dmc_phd_dissertations_filenames.txt'
+        authors_file = 'dmc_phd_dissertations_authors.txt'
+        titles_file = 'dmc_phd_dissertations_titles.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=24&page='
-        links_file = 'dmc_msc_theses_links.txt'
-        pdfs_file = 'dmc_msc_theses_filenames.txt'
-        authors_file = 'dmc_msc_theses_authors.txt'
-        titles_file = 'dmc_msc_theses_titles.txt'
+        links_file = 'dmc_msc_dissertations_links.txt'
+        pdfs_file = 'dmc_msc_dissertations_filenames.txt'
+        authors_file = 'dmc_msc_dissertations_authors.txt'
+        titles_file = 'dmc_msc_dissertations_titles.txt'
         pages = 15
 elif department == 6:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=25&page='
-        links_file = 'dmst_phd_theses_links.txt'
-        pdfs_file = 'dmst_phd_theses_filenames.txt'
-        authors_file = 'dmst_phd_theses_authors.txt'
-        titles_file = 'dmst_phd_theses_titles.txt'
+        links_file = 'dmst_phd_dissertations_links.txt'
+        pdfs_file = 'dmst_phd_dissertations_filenames.txt'
+        authors_file = 'dmst_phd_dissertations_authors.txt'
+        titles_file = 'dmst_phd_dissertations_titles.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=25&page='
-        links_file = 'dmst_msc_theses_links.txt'
-        pdfs_file = 'dmst_msc_theses_filenames.txt'
-        authors_file = 'dmst_msc_theses_authors.txt'
-        titles_file = 'dmst_msc_theses_titles.txt'
+        links_file = 'dmst_msc_dissertations_links.txt'
+        pdfs_file = 'dmst_msc_dissertations_filenames.txt'
+        authors_file = 'dmst_msc_dissertations_authors.txt'
+        titles_file = 'dmst_msc_dissertations_titles.txt'
         pages = 3
 elif department == 7:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=3&page='
-        links_file = 'de_phd_theses_links.txt'
-        pdfs_file = 'de_phd_theses_filenames.txt'
-        authors_file = 'de_phd_theses_authors.txt'
-        titles_file = 'de_phd_theses_titles.txt'
+        links_file = 'de_phd_dissertations_links.txt'
+        pdfs_file = 'de_phd_dissertations_filenames.txt'
+        authors_file = 'de_phd_dissertations_authors.txt'
+        titles_file = 'de_phd_dissertations_titles.txt'
         pages = 2
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=20&page='
-        links_file = 'de_msc_theses_links.txt'
-        pdfs_file = 'de_msc_theses_filenames.txt'
-        authors_file = 'de_msc_theses_authors.txt'
-        titles_file = 'de_msc_theses_titles.txt'
+        links_file = 'de_msc_dissertations_links.txt'
+        pdfs_file = 'de_msc_dissertations_filenames.txt'
+        authors_file = 'de_msc_dissertations_authors.txt'
+        titles_file = 'de_msc_dissertations_titles.txt'
         pages = 39
 else:
     if PhDOrMSc.lower() == 'phd':
         # PhD Theses
         middle_url = 'index.php?op=view_container&object_id=5&pid=22&page='
-        links_file = 'diees_phd_theses_links.txt'
-        pdfs_file = 'diees_phd_theses_filenames.txt'
-        authors_file = 'diees_phd_theses_authors.txt'
-        titles_file = 'diees_phd_theses_titles.txt'
+        links_file = 'diees_phd_dissertations_links.txt'
+        pdfs_file = 'diees_phd_dissertations_filenames.txt'
+        authors_file = 'diees_phd_dissertations_authors.txt'
+        titles_file = 'diees_phd_dissertations_titles.txt'
         pages = 1
     else:
         # Postgraduate dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=22&page='
-        links_file = 'diees_msc_theses_links.txt'
-        pdfs_file = 'diees_msc_theses_filenames.txt'
-        authors_file = 'diees_msc_theses_authors.txt'
-        titles_file = 'diees_msc_theses_titles.txt'
+        links_file = 'diees_msc_dissertations_links.txt'
+        pdfs_file = 'diees_msc_dissertations_filenames.txt'
+        authors_file = 'diees_msc_dissertations_authors.txt'
+        titles_file = 'diees_msc_dissertations_titles.txt'
         pages = 20
 
 
