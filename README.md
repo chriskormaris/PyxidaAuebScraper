@@ -39,4 +39,3 @@ pyinstaller pyxida_gui.spec
 ```
 And then run the created file "pyxida_gui.exe"!
 Now, you can download all the theses you want easily!
-
