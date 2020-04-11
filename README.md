@@ -10,13 +10,13 @@ Visit:
 
 **Step 1**
 Run:
-```bash
+```shell
 python pyxida_aueb_scraper.py
 ```
 
 **Step 2**
 Run:
-```bash
+```shell
 python pyxida_aueb_downloader.py
 ```
 
@@ -26,14 +26,14 @@ python pyxida_aueb_downloader.py
 
 You can simply open and run the GUI application.
 Run:
-```bash
+```shell
 python pyxida_gui.py
 ```
 
 or
 
 You to make an executable file for the gui. Run:
-```bash
+```shell
 pip install pyinstaller
 pyinstaller pyxida_gui.spec
 ```
