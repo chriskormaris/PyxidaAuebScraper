@@ -32,7 +32,7 @@ python pyxida_gui.py
 
 or
 
-You to make an executable file for the gui. Run:
+You can make an executable file for the gui. Run:
 ```shell
 pip install pyinstaller
 pyinstaller pyxida_gui.spec
