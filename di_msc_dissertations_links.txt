@@ -1,6 +1,5 @@
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:1733&ds_id=PDF1
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:1732&ds_id=PDF1
-http://www.pyxida.aueb.gr/getfile.php?object_id=iid:3809&ds_id=PDF1
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:1734&ds_id=PDF1
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:1736&ds_id=PDF1
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:1737&ds_id=PDF1
@@ -164,6 +163,7 @@ http://www.pyxida.aueb.gr/getfile.php?object_id=iid:2526&ds_id=PDF1
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:2528&ds_id=PDF1
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:2529&ds_id=PDF1
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:2530&ds_id=PDF1
+http://www.pyxida.aueb.gr/getfile.php?object_id=iid:2530&ds_id=PDF2
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:2531&ds_id=PDF1
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:2532&ds_id=PDF1
 http://www.pyxida.aueb.gr/getfile.php?object_id=iid:2533&ds_id=PDF1

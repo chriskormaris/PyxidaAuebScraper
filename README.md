@@ -1,5 +1,6 @@
-# PyxidaAuebThesesScraper
-A web scrapper tool to easily extract links from the Pyxida Institutional Repository. The urls extracted contain MSc and PhD theses, in ".pdf" format, from all the departments of AUEB.
+# PyxidaAuebDissertationsScraper
+A web scrapper tool to easily extract links from the Pyxida Institutional Repository.
+The urls extracted contain MSc and PhD dissertations, in ".pdf" format, from all the departments of AUEB.
 
 Visit:
 [http://www.pyxida.aueb.gr](http://www.pyxida.aueb.gr)
@@ -22,7 +23,7 @@ python pyxida_aueb_downloader.py
 
 ## GUI
 
-![screenshot](screenshot.png)
+![screenshot](PyxidaAUEBDissertationsScraper/screenshot.png)
 
 You can simply open and run the GUI application.
 Run:
@@ -38,4 +39,4 @@ pip install pyinstaller
 pyinstaller pyxida_gui.spec
 ```
 And then run the created file "pyxida_gui.exe"!
-Now, you can download all the theses you want easily!
+Now, you can download all the dissertations you want easily!

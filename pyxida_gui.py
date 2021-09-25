@@ -8,7 +8,7 @@ import os
 __author__ = 'c.kormaris'
 
 # create window and set title
-root = tk.Tk(className='Pyxida AUEB Theses Scraper and Downloader')
+root = tk.Tk(className='Pyxida AUEB Dissertations Scraper and Downloader')
 
 # change window size
 root.geometry("800x600")
@@ -110,14 +110,14 @@ PhDOrMScFrame.pack()
 
 # 3. buttonsFrame Widgets #
 runScraperButton = tk.Button(buttonsFrame, text="Run Scraper", fg="#000000", bg="#458BAB",
-                      height=2, width=12, command=run_scraper)
+                             height=2, width=12, command=run_scraper)
 runScraperButton.pack(side=tk.TOP)
 
 empty_line_label = tk.Label(buttonsFrame, text="\r")
 empty_line_label.pack()
 
 runDownloaderButton = tk.Button(buttonsFrame, text="Run Downloader", fg="#000000", bg="#458BAB",
-                      height=2, width=12, command=run_downloader)
+                                height=2, width=12, command=run_downloader)
 runDownloaderButton.pack(side=tk.BOTTOM)
 
 buttonsFrame.pack()

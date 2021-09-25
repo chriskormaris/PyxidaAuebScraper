@@ -29,44 +29,44 @@ except IndexError:
 
 if department == 1:
     if PhDOrMSc.lower() == 'phd':
-        name = 'di_phd_theses'
+        name = 'di_phd_dissertations'
     else:
-        name = 'di_msc_theses'
+        name = 'di_msc_dissertations'
 elif department == 2:
     if PhDOrMSc.lower() == 'phd':
-        name = 'ds_phd_theses'
+        name = 'ds_phd_dissertations'
     else:
-        name = 'ds_msc_theses'
+        name = 'ds_msc_dissertations'
 elif department == 3:
     if PhDOrMSc.lower() == 'phd':
-        name = 'dba_phd_theses'
+        name = 'dba_phd_dissertations'
     else:
-        name = 'dba_msc_theses'
+        name = 'dba_msc_dissertations'
 elif department == 4:
     if PhDOrMSc.lower() == 'phd':
-        name = 'daf_phd_theses'
+        name = 'daf_phd_dissertations'
     else:
-        name = 'daf_msc_theses'
+        name = 'daf_msc_dissertations'
 elif department == 5:
     if PhDOrMSc.lower() == 'phd':
-        name = 'dmc_phd_theses'
+        name = 'dmc_phd_dissertations'
     else:
-        name = 'dmc_msc_theses'
+        name = 'dmc_msc_dissertations'
 elif department == 6:
     if PhDOrMSc.lower() == 'phd':
-        name = 'dmst_phd_theses'
+        name = 'dmst_phd_dissertations'
     else:
-        name = 'dmst_msc_theses'
+        name = 'dmst_msc_dissertations'
 elif department == 7:
     if PhDOrMSc.lower() == 'phd':
-        name = 'de_phd_theses'
+        name = 'de_phd_dissertations'
     else:
-        name = 'de_msc_theses'
+        name = 'de_msc_dissertations'
 else:
     if PhDOrMSc.lower() == 'phd':
-        name = 'diees_phd_theses'
+        name = 'diees_phd_dissertations'
     else:
-        name = 'diees_msc_theses'
+        name = 'diees_msc_dissertations'
 
 if not os.path.exists(name):
     os.mkdir(name)

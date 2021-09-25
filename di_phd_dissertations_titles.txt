@@ -17,3 +17,4 @@ Securing critical infrastructures at software and interdependency levels
 Fighting an unfair battle: unconventional defenses against Advanced Persistent Threats
 Algorithmic problems in power management of computing systems
 Πλαίσιο διαχείρισης κατανεμημένων συστημάτων και υπηρεσιών βασισμένο σε τεχνολογίες ιστού: εφαρμογή στην περίπτωση των δικτύων διανομής περιεχομένου
+The contribution of experiential and material purchases to happiness: expanding the experience recommendation
