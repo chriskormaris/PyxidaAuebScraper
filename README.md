@@ -23,7 +23,7 @@ python pyxida_aueb_downloader.py
 
 ## GUI
 
-![screenshot](PyxidaAUEBDissertationsScraper/screenshot.png)
+![screenshot](screenshot.png)
 
 You can simply open and run the GUI application.
 Run:
