@@ -102,5 +102,4 @@ ENV/
 
 # added by use
 .pdf
-di_msc_dissertations
-di_phd_dissertations
+output/

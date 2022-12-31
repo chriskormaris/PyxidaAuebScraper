@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
 
-import urllib.request
-import bs4 as bs
+import os
 import sys
 
+import bs4 as bs
+import requests
 
 __author__ = 'c.kormaris'
 
-prefix_url = 'http://www.pyxida.aueb.gr/'
+base_url = 'http://www.pyxida.aueb.gr/'
+txt_path = 'txt/'
 
-department = -1
-PhDOrMSc = -1
+department = 1
+phd_or_msc = 'phd'
 try:
     department = int(sys.argv[1])
-    PhDOrMSc = sys.argv[2]
+    phd_or_msc = sys.argv[2]
 except IndexError:
     print('Usage: python pyxida_aueb_scraper.py department_number PhDOrMSc')
 
@@ -29,150 +31,123 @@ except IndexError:
 # PhDOrMSc = 'phd'
 # PhDOrMSc = 'msc'
 
+links_file_postfix = '_dissertations_links.txt'
+pdfs_file_postfix = '_dissertations_filenames.txt'
+authors_file_postfix = '_dissertations_authors.txt'
+titles_file_postfix = '_dissertations_titles.txt'
+
 if department == 1:
-    if PhDOrMSc.lower() == 'phd':
+    if phd_or_msc.lower() == 'phd':
         # PhD Dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=3&page='
-        links_file = 'di_phd_dissertations_links.txt'
-        pdfs_file = 'di_phd_dissertations_filenames.txt'
-        authors_file = 'di_phd_dissertations_authors.txt'
-        titles_file = 'di_phd_dissertations_titles.txt'
         pages = 1
     else:
         # Postgraduate Dissertations
         middle_url = 'index.php?op=view_container&object_id=1890&pid=2&page='
-        links_file = 'di_msc_dissertations_links.txt'
-        pdfs_file = 'di_msc_dissertations_filenames.txt'
-        authors_file = 'di_msc_dissertations_authors.txt'
-        titles_file = 'di_msc_dissertations_titles.txt'
         pages = 33
+    links_file = 'di_' + phd_or_msc.lower() + links_file_postfix
+    pdfs_file = 'di_' + phd_or_msc.lower() + pdfs_file_postfix
+    authors_file = 'di_' + phd_or_msc.lower() + authors_file_postfix
+    titles_file = 'di_' + phd_or_msc.lower() + titles_file_postfix
 elif department == 2:
-    if PhDOrMSc.lower() == 'phd':
+    if phd_or_msc.lower() == 'phd':
         # PhD Dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=26&page'
-        links_file = 'ds_phd_theses_links.txt'
-        pdfs_file = 'ds_phd_theses_filenames.txt'
-        authors_file = 'ds_phd_theses_authors.txt'
-        titles_file = 'ds_phd_theses_titles.txt'
         pages = 1
     else:
         # Postgraduate Dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=26&page='
-        links_file = 'ds_msc_theses_links.txt'
-        pdfs_file = 'ds_msc_theses_filenames.txt'
-        authors_file = 'ds_msc_theses_authors.txt'
-        titles_file = 'ds_msc_theses_titles.txt'
         pages = 32
+    links_file = 'ds_' + phd_or_msc.lower() + links_file_postfix
+    pdfs_file = 'ds_' + phd_or_msc.lower() + pdfs_file_postfix
+    authors_file = 'ds_' + phd_or_msc.lower() + authors_file_postfix
+    titles_file = 'ds_' + phd_or_msc.lower() + titles_file_postfix
 elif department == 3:
-    if PhDOrMSc.lower() == 'phd':
+    if phd_or_msc.lower() == 'phd':
         # PhD Dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=21&page='
-        links_file = 'dba_phd_theses_links.txt'
-        pdfs_file = 'dba_phd_theses_filenames.txt'
-        authors_file = 'dba_phd_theses_authors.txt'
-        titles_file = 'dba_phd_theses_titles.txt'
         pages = 1
     else:
         # Postgraduate Dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=21&page='
-        links_file = 'dba_msc_theses_links.txt'
-        pdfs_file = 'dba_msc_theses_filenames.txt'
-        authors_file = 'dba_msc_theses_authors.txt'
-        titles_file = 'dba_msc_theses_titles.txt'
         pages = 15
+    links_file = 'dba_' + phd_or_msc.lower() + links_file_postfix
+    pdfs_file = 'dba_' + phd_or_msc.lower() + pdfs_file_postfix
+    authors_file = 'dba_' + phd_or_msc.lower() + authors_file_postfix
+    titles_file = 'dba_' + phd_or_msc.lower() + titles_file_postfix
 elif department == 4:
-    if PhDOrMSc.lower() == 'phd':
+    if phd_or_msc.lower() == 'phd':
         # PhD Dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=23&page='
-        links_file = 'daf_phd_theses_links.txt'
-        pdfs_file = 'daf_phd_theses_filenames.txt'
-        authors_file = 'daf_phd_theses_authors.txt'
-        titles_file = 'daf_phd_theses_titles.txt'
         pages = 1
     else:
         # Postgraduate Dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=23&page='
-        links_file = 'daf_msc_theses_links.txt'
-        pdfs_file = 'daf_msc_theses_filenames.txt'
-        authors_file = 'daf_msc_theses_authors.txt'
-        titles_file = 'daf_msc_theses_titles.txt'
         pages = 17
+    links_file = 'daf_' + phd_or_msc.lower() + links_file_postfix
+    pdfs_file = 'daf_' + phd_or_msc.lower() + pdfs_file_postfix
+    authors_file = 'daf_' + phd_or_msc.lower() + authors_file_postfix
+    titles_file = 'daf_' + phd_or_msc.lower() + titles_file_postfix
 elif department == 5:
-    if PhDOrMSc.lower() == 'phd':
+    if phd_or_msc.lower() == 'phd':
         # PhD Dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=24&page='
-        links_file = 'dmc_phd_theses_links.txt'
-        pdfs_file = 'dmc_phd_theses_filenames.txt'
-        authors_file = 'dmc_phd_theses_authors.txt'
-        titles_file = 'dmc_phd_theses_titles.txt'
         pages = 1
     else:
         # Postgraduate Dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=24&page='
-        links_file = 'dmc_msc_theses_links.txt'
-        pdfs_file = 'dmc_msc_theses_filenames.txt'
-        authors_file = 'dmc_msc_theses_authors.txt'
-        titles_file = 'dmc_msc_theses_titles.txt'
         pages = 15
+    links_file = 'dmc_' + phd_or_msc.lower() + links_file_postfix
+    pdfs_file = 'dmc_' + phd_or_msc.lower() + pdfs_file_postfix
+    authors_file = 'dmc_' + phd_or_msc.lower() + authors_file_postfix
+    titles_file = 'dmc_' + phd_or_msc.lower() + titles_file_postfix
 elif department == 6:
-    if PhDOrMSc.lower() == 'phd':
+    if phd_or_msc.lower() == 'phd':
         # PhD Dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=25&page='
-        links_file = 'dmst_phd_theses_links.txt'
-        pdfs_file = 'dmst_phd_theses_filenames.txt'
-        authors_file = 'dmst_phd_theses_authors.txt'
-        titles_file = 'dmst_phd_theses_titles.txt'
         pages = 1
     else:
         # Postgraduate Dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=25&page='
-        links_file = 'dmst_msc_theses_links.txt'
-        pdfs_file = 'dmst_msc_theses_filenames.txt'
-        authors_file = 'dmst_msc_theses_authors.txt'
-        titles_file = 'dmst_msc_theses_titles.txt'
         pages = 3
+    links_file = 'dmst_' + phd_or_msc.lower() + links_file_postfix
+    pdfs_file = 'dmst_' + phd_or_msc.lower() + pdfs_file_postfix
+    authors_file = 'dmst_' + phd_or_msc.lower() + authors_file_postfix
+    titles_file = 'dmst_' + phd_or_msc.lower() + titles_file_postfix
 elif department == 7:
-    if PhDOrMSc.lower() == 'phd':
+    if phd_or_msc.lower() == 'phd':
         # PhD Dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=3&page='
-        links_file = 'de_phd_theses_links.txt'
-        pdfs_file = 'de_phd_theses_filenames.txt'
-        authors_file = 'de_phd_theses_authors.txt'
-        titles_file = 'de_phd_theses_titles.txt'
         pages = 2
     else:
         # Postgraduate Dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=20&page='
-        links_file = 'de_msc_theses_links.txt'
-        pdfs_file = 'de_msc_theses_filenames.txt'
-        authors_file = 'de_msc_theses_authors.txt'
-        titles_file = 'de_msc_theses_titles.txt'
         pages = 39
+    links_file = 'de_' + phd_or_msc.lower() + links_file_postfix
+    pdfs_file = 'de_' + phd_or_msc.lower() + pdfs_file_postfix
+    authors_file = 'de_' + phd_or_msc.lower() + authors_file_postfix
+    titles_file = 'de_' + phd_or_msc.lower() + titles_file_postfix
 else:
-    if PhDOrMSc.lower() == 'phd':
+    if phd_or_msc.lower() == 'phd':
         # PhD Dissertations
         middle_url = 'index.php?op=view_container&object_id=5&pid=22&page='
-        links_file = 'diees_phd_theses_links.txt'
-        pdfs_file = 'diees_phd_theses_filenames.txt'
-        authors_file = 'diees_phd_theses_authors.txt'
-        titles_file = 'diees_phd_theses_titles.txt'
         pages = 1
     else:
         # Postgraduate Dissertations
         middle_url = 'index.php?op=view_container&object_id=4&pid=22&page='
-        links_file = 'diees_msc_theses_links.txt'
-        pdfs_file = 'diees_msc_theses_filenames.txt'
-        authors_file = 'diees_msc_theses_authors.txt'
-        titles_file = 'diees_msc_theses_titles.txt'
         pages = 20
+    links_file = 'diees_' + phd_or_msc.lower() + links_file_postfix
+    pdfs_file = 'diees_' + phd_or_msc.lower() + pdfs_file_postfix
+    authors_file = 'diees_' + phd_or_msc.lower() + authors_file_postfix
+    titles_file = 'diees_' + phd_or_msc.lower() + titles_file_postfix
 
 
 thesis_links = []
 
 for i in range(1, pages + 1):
 
-    current_url = prefix_url + middle_url + str(i)
-    source = urllib.request.urlopen(current_url).read()
+    current_url = base_url + middle_url + str(i)
+    source = requests.get(current_url).text
     soup = bs.BeautifulSoup(source, 'lxml')
 
     for url in (soup.find_all('a')):
@@ -183,7 +158,7 @@ for i in range(1, pages + 1):
                 thesis_links.append(url.get('href'))
                 # print(url.get('href'))
             else:
-                thesis_links.append(prefix_url + url.get('href'))
+                thesis_links.append(base_url + url.get('href'))
                 # print(prefix + url.get('href'))
 
 
@@ -193,14 +168,15 @@ titles = []
 pdf_filenames = []
 
 for link in thesis_links:
-    source = urllib.request.urlopen(link).read()
+    source = requests.get(link).text
     soup = bs.BeautifulSoup(source, 'lxml')
 
     # divs = soup.find_all('div')
     # details = divs[10]
 
     # get the title
-    table = soup.find_all('table', {'class': 'view-object-table'})[1]
+    table_elements = soup.find_all('table', {'class': 'view-object-table'})
+    table = table_elements[1]
     table_rows = table.find_all('tr')
     for tr in table_rows:
         td = tr.find_all('td', {'valign': 'top'})
@@ -209,9 +185,9 @@ for link in thesis_links:
         print(row[0])
 
     # get the author name
-    table = soup.find_all('table', {'class': 'view-object-table'})[2]
+    table = table_elements[2]
     if 'δημιουργός' not in str(table).lower():
-        table = soup.find_all('table', {'class': 'view-object-table'})[3]
+        table = table_elements[3]
     table_rows = table.find_all('tr')
     for tr in table_rows:
         td = tr.find_all('td', {'valign': 'top'})
@@ -222,34 +198,41 @@ for link in thesis_links:
     # get the ".pdf" link
     for url in (soup.find_all('a')):
         if 'pdf' in url.get('href').lower():
-            pdf_links.append(prefix_url + url.get('href'))
-            print(prefix_url + url.get('href'))
+            pdf_links.append(base_url + url.get('href'))
+            print(base_url + url.get('href'))
 
             pdf_filenames.append(url.contents[0])
 
+    print('--------------------')
+
 print('')
-print('Writing to file...')
+print('Writing to files...')
+
+if not os.path.exists(txt_path):
+    os.mkdir(txt_path)
+
 # write list of ".pdf" links to file
-file = open(links_file, 'w', encoding="utf-8")
+file = open(txt_path + links_file, 'w', encoding="utf-8")
 for pdf_link in pdf_links:
     file.write("%s\n" % pdf_link)
 file.close()
 
 # write list of ".pdf" filenames to file
-file = open(pdfs_file, 'w', encoding="utf-8")
+file = open(txt_path + pdfs_file, 'w', encoding="utf-8")
 for pdf_filename in pdf_filenames:
     file.write("%s\n" % pdf_filename)
 file.close()
 
 # write list of titles to file
-file = open(titles_file, 'w', encoding="utf-8")
+file = open(txt_path + titles_file, 'w', encoding="utf-8")
 for title in titles:
     file.write("%s\n" % title)
 file.close()
 
 # write list of author names to file
-file = open(authors_file, 'w', encoding="utf-8")
+file = open(txt_path + authors_file, 'w', encoding="utf-8")
 for author in authors:
     file.write("%s\n" % author)
 file.close()
-print('DONE')
+
+print('[DONE]')

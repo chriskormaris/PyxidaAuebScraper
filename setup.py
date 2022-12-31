@@ -8,12 +8,13 @@ if sys.platform == 'win64':
 elif sys.platform == 'win32':
     base = 'Win32GUI'
 
-executables = [cx_Freeze.Executable('pyxida_gui.py', base=base, icon='compass.png')]
-includefiles = ['compass.png', 'help.png']
+img_path = 'img\\'
+executables = [cx_Freeze.Executable('pyxida_gui.py', base=base, icon=img_path + 'compass.png')]
+include_files = [img_path + x for x in ['compass.png', 'help.png']]
 includes = []
 excludes = ['Tkinter']
 packages = []
-build_exe_options = {'includes': includes, 'packages': packages, 'excludes': excludes, 'include_files': includefiles}
+build_exe_options = {'includes': includes, 'packages': packages, 'excludes': excludes, 'include_files': include_files}
 
 cx_Freeze.setup(
     name='pyxida',

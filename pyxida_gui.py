@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
+import os
 import tkinter as tk
 
-import os
-
-
 __author__ = 'c.kormaris'
+
+img_path = 'img\\'
 
 # create window and set title
 root = tk.Tk(className='Pyxida AUEB Dissertations Scraper and Downloader')
@@ -13,7 +13,7 @@ root = tk.Tk(className='Pyxida AUEB Dissertations Scraper and Downloader')
 # change window size
 root.geometry("800x600")
 # change icon
-icon = tk.PhotoImage(file='compass.png')
+icon = tk.PhotoImage(file=img_path + 'compass.png')
 root.tk.call('wm', 'iconphoto', root._w, icon)
 
 departments = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -66,16 +66,29 @@ def run_downloader():
 def about_window():
     window = tk.Toplevel(root)
     # change title
-    window.wm_title("About")
-    creator = tk.Label(window, text="Creator: Christos Kormaris")
+    window.wm_title('About')
+    creator = tk.Label(window, text='© Created by: Christos Kormaris')
     creator.pack()
-    date = tk.Label(window, text="Date: March 2018")
+    date = tk.Label(window, text='Date: March 2018')
     date.pack()
     # change icon
-    icon = tk.PhotoImage(file='help.png')
+    icon = tk.PhotoImage(file=img_path + 'help.png')
     window.tk.call('wm', 'iconphoto', window._w, icon)
-    window.geometry("200x50")
+    window.geometry('300x100')
     window.resizable(False, False)
+
+    okButton = tk.Button(
+        window,
+        text='Ok',
+        fg='#000000',
+        bg="#458BAB",
+        height=2,
+        width=6,
+        command=window.destroy
+    )
+    okButton.pack(side=tk.BOTTOM)
+
+    center(window)
 
 
 # 1. departmentsFrame Widgets #
@@ -109,15 +122,29 @@ empty_line_label.pack()
 PhDOrMScFrame.pack()
 
 # 3. buttonsFrame Widgets #
-runScraperButton = tk.Button(buttonsFrame, text="Run Scraper", fg="#000000", bg="#458BAB",
-                             height=2, width=12, command=run_scraper)
+runScraperButton = tk.Button(
+    buttonsFrame,
+    text='Run Scraper',
+    fg='#000000',
+    bg='#458BAB',
+    height=2,
+    width=12,
+    command=run_scraper
+)
 runScraperButton.pack(side=tk.TOP)
 
 empty_line_label = tk.Label(buttonsFrame, text="\r")
 empty_line_label.pack()
 
-runDownloaderButton = tk.Button(buttonsFrame, text="Run Downloader", fg="#000000", bg="#458BAB",
-                                height=2, width=12, command=run_downloader)
+runDownloaderButton = tk.Button(
+    buttonsFrame,
+    text='Run Downloader',
+    fg='#000000',
+    bg='#458BAB',
+    height=2,
+    width=12,
+    command=run_downloader
+)
 runDownloaderButton.pack(side=tk.BOTTOM)
 
 buttonsFrame.pack()
@@ -129,8 +156,8 @@ menu = tk.Menu(root)
 root.config(menu=menu)
 
 aboutMenu = tk.Menu(menu, tearoff=False)
-menu.add_cascade(label="About", menu=aboutMenu)  # adds drop-down menu
-aboutMenu.add_command(label="About", command=about_window)
+menu.add_cascade(label='About', menu=aboutMenu)  # adds drop-down menu
+aboutMenu.add_command(label='About', command=about_window)
 
 
 #####
