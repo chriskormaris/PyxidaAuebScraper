@@ -33,8 +33,8 @@ PhDOrMScFrame = tk.Frame(root)
 buttonsFrame = tk.Frame(root)
 
 department_var = tk.StringVar(departmentsFrame, 1)
-PhDOrMScFrame_var = tk.StringVar(PhDOrMScFrame, 'phd')
-variables = [department_var, PhDOrMScFrame_var]
+php_or_msc_frame_var = tk.StringVar(PhDOrMScFrame, 'phd')
+variables = [department_var, php_or_msc_frame_var]
 
 
 def run_scraper():
@@ -77,16 +77,8 @@ def about_window():
     window.geometry('300x100')
     window.resizable(False, False)
 
-    okButton = tk.Button(
-        window,
-        text='Ok',
-        fg='#000000',
-        bg="#458BAB",
-        height=2,
-        width=6,
-        command=window.destroy
-    )
-    okButton.pack(side=tk.BOTTOM)
+    ok_button = tk.Button(window, text='Ok', fg='#000000', bg="#458BAB", height=2, width=6, command=window.destroy)
+    ok_button.pack(side=tk.BOTTOM)
 
     center(window)
 
@@ -110,11 +102,13 @@ departmentsFrame.pack()
 PhDOrMScFrame_label = tk.Label(PhDOrMScFrame, text="PHD or MSc: ")
 PhDOrMScFrame_label.pack()
 for value in PhDOrMSc:
-    tk.Radiobutton(PhDOrMScFrame,
-                   text=value,
-                   padx=2,
-                   variable=PhDOrMScFrame_var,
-                   value=value).pack(anchor=tk.CENTER)
+    tk.Radiobutton(
+        PhDOrMScFrame,
+        text=value,
+        padx=2,
+        variable=php_or_msc_frame_var,
+        value=value
+    ).pack(anchor=tk.CENTER)
 
 empty_line_label = tk.Label(PhDOrMScFrame, text="\n")
 empty_line_label.pack()
@@ -173,5 +167,8 @@ def center(win):
     win.geometry('{}x{}+{}+{}'.format(width, height, x, y))
 
 
-center(root)
-root.mainloop()
+#####
+
+if __name__ == '__main__':
+    center(root)
+    root.mainloop()
