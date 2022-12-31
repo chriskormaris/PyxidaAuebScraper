@@ -2,7 +2,8 @@
 
 import os
 import sys
-from urllib.request import urlretrieve
+
+import requests
 
 __author__ = 'c.kormaris'
 
@@ -86,7 +87,9 @@ file.close()
 
 for i, pdf_link in enumerate(pdf_links):
     # id = pdf_link.split('iid:')[1].split('&')[0]
-    urlretrieve(pdf_link, filename=output_path + name + '/' + pdf_filenames[i])
+    response = requests.get(pdf_link)
+    filename = output_path + name + '/' + pdf_filenames[i]
+    open(filename, "wb").write(response.content)
     print(pdf_filenames[i])
 
 print('[DONE]')
