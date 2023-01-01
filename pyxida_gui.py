@@ -77,7 +77,7 @@ def about_window():
     window.geometry('300x100')
     window.resizable(False, False)
 
-    ok_button = tk.Button(window, text='Ok', fg='#000000', bg="#458BAB", height=2, width=6, command=window.destroy)
+    ok_button = tk.Button(window, text='Ok', fg='#ffffff', bg="#458BAB", height=2, width=6, command=window.destroy)
     ok_button.pack(side=tk.BOTTOM)
 
     center(window)
@@ -87,11 +87,13 @@ def about_window():
 departments_label = tk.Label(departmentsFrame, text="departments: ")
 departments_label.pack()
 for i in range(len(departments)):
-    tk.Radiobutton(departmentsFrame,
-                   text=department_names[i],
-                   padx=2,
-                   variable=department_var,
-                   value=departments[i]).pack(anchor=tk.CENTER)
+    tk.Radiobutton(
+        departmentsFrame,
+        text=department_names[i],
+        padx=2,
+        variable=department_var,
+        value=departments[i]
+    ).pack(anchor=tk.CENTER)
 
 empty_line_label = tk.Label(departmentsFrame, text="\n")
 empty_line_label.pack()
@@ -119,7 +121,7 @@ PhDOrMScFrame.pack()
 runScraperButton = tk.Button(
     buttonsFrame,
     text='Run Scraper',
-    fg='#000000',
+    fg='#ffffff',
     bg='#458BAB',
     height=2,
     width=12,
@@ -133,7 +135,7 @@ empty_line_label.pack()
 runDownloaderButton = tk.Button(
     buttonsFrame,
     text='Run Downloader',
-    fg='#000000',
+    fg='#ffffff',
     bg='#458BAB',
     height=2,
     width=12,
