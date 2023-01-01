@@ -1,5 +1,5 @@
-# PyxidaAuebDissertationsScraper
-A web scrapper tool to easily extract links from the Pyxida Institutional Repository.
+# Pyxida Scraper
+A web scrapper tool to easily extract links from the Pyxida AUEB Institutional Repository.
 The urls extracted contain MSc and PhD dissertations, in `.pdf` format, from all the departments of AUEB.
 
 Visit:
@@ -31,9 +31,9 @@ Run:
 python pyxida_gui.py
 ```
 
-or
+## Create executable with pyinstaller
 
-You can make an executable file for the gui.
+You can make an executable file for the GUI.
 First, install the required library `pyinstaller`:
 ```shell
 pip install pyinstaller
@@ -44,5 +44,6 @@ Then, run:
 pyinstaller pyxida_gui.spec
 ```
 
+Go to `dist/pyxida_gui`.
 And then run the created file `pyxida_gui.exe`!
 Now, you can download all the dissertations you want easily!
