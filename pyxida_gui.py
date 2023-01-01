@@ -17,14 +17,16 @@ icon = tk.PhotoImage(file=img_path + 'compass.png')
 root.tk.call('wm', 'iconphoto', root._w, icon)
 
 departments = [1, 2, 3, 4, 5, 6, 7, 8]
-department_names = ['Department of Informatics',
-                    'Department of Statistics',
-                    'Department of Business Administration',
-                    'Department of Accounting and Finance',
-                    'Department of Marketing and Communication',
-                    'Department of Management Science and Technology',
-                    'Department of Economics',
-                    'Department of International and European Economic Studies']
+department_names = [
+    'Department of Informatics',
+    'Department of Statistics',
+    'Department of Business Administration',
+    'Department of Accounting and Finance',
+    'Department of Marketing and Communication',
+    'Department of Management Science and Technology',
+    'Department of Economics',
+    'Department of International and European Economic Studies'
+]
 PhDOrMSc = ['phd', 'msc']
 
 # Frames #
@@ -144,7 +146,6 @@ runDownloaderButton = tk.Button(
 runDownloaderButton.pack(side=tk.BOTTOM)
 
 buttonsFrame.pack()
-
 
 # Menus #
 
