@@ -3,3 +3,4 @@ tk
 future
 requests
 beautifulsoup4
+lxml

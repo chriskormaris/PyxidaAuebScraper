@@ -17,7 +17,7 @@ try:
     department = int(sys.argv[1])
     phd_or_msc = sys.argv[2]
 except IndexError:
-    print('Usage: python pyxida_aueb_scraper.py department_number PhDOrMSc')
+    print('Usage: python pyxida_scraper.py department_number PhDOrMSc')
 
 # department = 1  # Τμήμα Πληροφορικής / Department of Informatics
 # department = 2  # Τμήμα Στατιστικής / Department of Statistics

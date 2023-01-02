@@ -4,10 +4,13 @@ block_cipher = None
 
 
 a = Analysis(['pyxida_gui.py'],
-             pathex=['D:\\Workspace\\PycharmProjects\\PyxidaAuebDissertationsScraper'],
+             pathex=['.'],
              binaries=[],
-             datas=[('img\\compass.png', 'img'), ('img\\help.png', 'img')],
-             hiddenimports=[],
+             datas=[('img\\compass.ico', 'img'),
+                    ('img\\info.ico', 'img'),
+                    ('pyxida_downloader.py', '.'),
+                    ('pyxida_scraper.py', '.')],
+             hiddenimports=['lxml'],
              hookspath=[],
              runtime_hooks=[],
              excludes=['tk'],

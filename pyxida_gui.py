@@ -8,13 +8,13 @@ __author__ = 'c.kormaris'
 img_path = 'img\\'
 
 # create window and set title
-root = tk.Tk(className='Pyxida AUEB Dissertations Scraper and Downloader')
+root = tk.Tk(className='Pyxida AUEB Scraper')
 
 # change window size
 root.geometry("800x600")
+
 # change icon
-icon = tk.PhotoImage(file=img_path + 'compass.png')
-root.tk.call('wm', 'iconphoto', root._w, icon)
+root.iconbitmap(img_path + 'compass.ico')
 
 departments = [1, 2, 3, 4, 5, 6, 7, 8]
 department_names = [
@@ -34,7 +34,7 @@ departmentsFrame = tk.Frame(root)
 PhDOrMScFrame = tk.Frame(root)
 buttonsFrame = tk.Frame(root)
 
-department_var = tk.StringVar(departmentsFrame, 1)
+department_var = tk.StringVar(departmentsFrame, '1')
 php_or_msc_frame_var = tk.StringVar(PhDOrMScFrame, 'phd')
 variables = [department_var, php_or_msc_frame_var]
 
@@ -45,7 +45,7 @@ def run_scraper():
         arguments.append(variable.get())
     arguments = ' '.join(arguments)
     # print(arguments)
-    python_script = 'pyxida_aueb_scraper.py'
+    python_script = 'pyxida_scraper.py'
     print('Running ' + python_script + '...')
     # os.environ('PATH')
     os.system('python ' + python_script + ' ' + arguments)
@@ -58,7 +58,7 @@ def run_downloader():
         arguments.append(variable.get())
     arguments = ' '.join(arguments)
     # print(arguments)
-    python_script = 'pyxida_aueb_downloader.py'
+    python_script = 'pyxida_downloader.py'
     print('Running ' + python_script + '...')
     # os.environ('PATH')
     os.system('python ' + python_script + ' ' + arguments)
@@ -69,18 +69,19 @@ def about_window():
     window = tk.Toplevel(root)
     # change title
     window.wm_title('About')
-    creator = tk.Label(window, text='© Created by: Christos Kormaris')
+    creator = tk.Label(window, text='© Created by Christos Kormaris')
     creator.pack()
-    date = tk.Label(window, text='Date: March 2018')
+    date = tk.Label(window, text='Athens, March 2018')
     date.pack()
+
     # change icon
-    icon = tk.PhotoImage(file=img_path + 'help.png')
-    window.tk.call('wm', 'iconphoto', window._w, icon)
+    window.iconbitmap(img_path + 'info.ico')
+
     window.geometry('300x100')
     window.resizable(False, False)
 
     ok_button = tk.Button(window, text='Ok', fg='#ffffff', bg="#458BAB", height=2, width=6, command=window.destroy)
-    ok_button.pack(side=tk.BOTTOM)
+    ok_button.pack()
 
     center(window)
 

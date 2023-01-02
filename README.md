@@ -12,13 +12,13 @@ Visit:
 **Step 1**
 Run:
 ```shell
-python pyxida_aueb_scraper.py
+python pyxida_scraper.py
 ```
 
 **Step 2**
 Run:
 ```shell
-python pyxida_aueb_downloader.py
+python pyxida_downloader.py
 ```
 
 ## GUI
