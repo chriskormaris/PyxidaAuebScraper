@@ -3,7 +3,6 @@
 import os
 import tkinter as tk
 
-__author__ = 'c.kormaris'
 
 img_path = 'img\\'
 
@@ -27,16 +26,16 @@ department_names = [
     'Department of Economics',
     'Department of International and European Economic Studies'
 ]
-PhDOrMSc = ['phd', 'msc']
+phd_or_msc = ['phd', 'msc']
 
 # Frames #
 departmentsFrame = tk.Frame(root)
-PhDOrMScFrame = tk.Frame(root)
+phd_or_msc_frame = tk.Frame(root)
 buttonsFrame = tk.Frame(root)
 
 department_var = tk.StringVar(departmentsFrame, '1')
-php_or_msc_frame_var = tk.StringVar(PhDOrMScFrame, 'phd')
-variables = [department_var, php_or_msc_frame_var]
+phd_or_msc_var = tk.StringVar(phd_or_msc_frame, 'phd')
+variables = [department_var, phd_or_msc_var]
 
 
 def run_scraper():
@@ -80,14 +79,14 @@ def about_window():
     window.geometry('300x100')
     window.resizable(False, False)
 
-    ok_button = tk.Button(window, text='Ok', fg='#ffffff', bg="#458BAB", height=2, width=6, command=window.destroy)
+    ok_button = tk.Button(window, text='Ok', fg='white', bg='#458BAB', height=2, width=6, command=window.destroy)
     ok_button.pack()
 
     center(window)
 
 
 # 1. departmentsFrame Widgets #
-departments_label = tk.Label(departmentsFrame, text="departments: ")
+departments_label = tk.Label(departmentsFrame, text='departments: ')
 departments_label.pack()
 for i in range(len(departments)):
     tk.Radiobutton(
@@ -104,27 +103,27 @@ empty_line_label.pack()
 departmentsFrame.pack()
 
 # 2. PhDOrMScFrame Widgets #
-PhDOrMScFrame_label = tk.Label(PhDOrMScFrame, text="PHD or MSc: ")
-PhDOrMScFrame_label.pack()
-for value in PhDOrMSc:
+phd_or_msc_label = tk.Label(phd_or_msc_frame, text='PhD or MSc: ')
+phd_or_msc_label.pack()
+for value in phd_or_msc:
     tk.Radiobutton(
-        PhDOrMScFrame,
+        phd_or_msc_frame,
         text=value,
         padx=2,
-        variable=php_or_msc_frame_var,
+        variable=phd_or_msc_var,
         value=value
     ).pack(anchor=tk.CENTER)
 
-empty_line_label = tk.Label(PhDOrMScFrame, text="\n")
+empty_line_label = tk.Label(phd_or_msc_frame, text="\n")
 empty_line_label.pack()
 
-PhDOrMScFrame.pack()
+phd_or_msc_frame.pack()
 
 # 3. buttonsFrame Widgets #
 runScraperButton = tk.Button(
     buttonsFrame,
     text='Run Scraper',
-    fg='#ffffff',
+    fg='white',
     bg='#458BAB',
     height=2,
     width=12,
@@ -138,7 +137,7 @@ empty_line_label.pack()
 runDownloaderButton = tk.Button(
     buttonsFrame,
     text='Run Downloader',
-    fg='#ffffff',
+    fg='white',
     bg='#458BAB',
     height=2,
     width=12,

@@ -5,8 +5,6 @@ import sys
 
 import requests
 
-__author__ = 'c.kormaris'
-
 output_path = 'output\\'
 txt_path = 'txt\\'
 
@@ -16,7 +14,7 @@ try:
     department = int(sys.argv[1])
     phd_or_msc = sys.argv[2]
 except IndexError:
-    print('Usage: python pyxida_downloader.py department_number PhDOrMSc')
+    print('Usage: python pyxida_downloader.py department_number phd_or_msc')
 
 
 # department = 1  # Τμήμα Πληροφορικής / Department of Informatics
