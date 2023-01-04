@@ -2,7 +2,7 @@ import os
 
 import requests
 
-output_path = 'output\\'
+output_path = '../output\\'
 txt_path = 'txt\\'
 
 # department = 1  # Τμήμα Πληροφορικής / Department of Informatics

@@ -4,3 +4,4 @@ future
 requests
 beautifulsoup4
 lxml
+cx_Freeze
