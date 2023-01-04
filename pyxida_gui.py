@@ -39,7 +39,8 @@ if __name__ == '__main__':
     img_path = 'img\\'
 
     # create window and set title
-    root = tk.Tk(className='Pyxida AUEB Scraper')
+    root = tk.Tk()
+    root.title('Pyxida AUEB Scraper & Downloader')
 
     # change window size
     root.geometry("800x600")
@@ -69,7 +70,7 @@ if __name__ == '__main__':
     phd_or_msc_var = tk.StringVar(phd_or_msc_frame, 'phd')
 
     # 1. departments_frame widgets #
-    departments_label = tk.Label(departments_frame, text='departments: ')
+    departments_label = tk.Label(departments_frame, text='Department: ')
     departments_label.pack()
     for i in range(len(departments)):
         tk.Radiobutton(
