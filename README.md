@@ -8,6 +8,12 @@ Visit:
 
 ## How to run
 
+First, install all requirements:
+```shell
+pip install -r requirements.txt
+```
+
+Change directory to `src` folder.
 
 **Step 1**
 Run:
