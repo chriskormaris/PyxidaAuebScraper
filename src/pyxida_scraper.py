@@ -3,8 +3,7 @@ import os
 import bs4 as bs
 import requests
 
-base_url = 'http://www.pyxida.aueb.gr/'
-txt_path = 'txt\\'
+from src.constants import *
 
 
 # department = 1  # Τμήμα Πληροφορικής / Department of Informatics
@@ -130,7 +129,6 @@ def pyxida_scraper(department=1, phd_or_msc='phd'):
         authors_file = 'diees_' + phd_or_msc.lower() + authors_file_postfix
         titles_file = 'diees_' + phd_or_msc.lower() + titles_file_postfix
 
-
     thesis_links = []
 
     for i in range(1, pages + 1):
@@ -149,7 +147,6 @@ def pyxida_scraper(department=1, phd_or_msc='phd'):
                 else:
                     thesis_links.append(base_url + url.get('href'))
                     # print(prefix + url.get('href'))
-
 
     pdf_links = []
     authors = []

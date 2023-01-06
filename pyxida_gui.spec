@@ -3,10 +3,9 @@
 block_cipher = None
 
 
-a = Analysis(['src\\pyxida_gui.py'],
+a = Analysis(['pyxida_gui.py'],
              pathex=['.'],
              binaries=[],
-             datas=[('src\\img\\compass.ico', 'img'), ('src\\img\\info.ico', 'img')],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
@@ -24,7 +23,7 @@ exe = EXE(pyz,
           strip=False,
           upx=True,
           console=True,
-          icon='src\\img\\compass.ico')
+          icon='img\\compass.ico')
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,

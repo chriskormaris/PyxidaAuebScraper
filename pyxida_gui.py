@@ -1,7 +1,7 @@
 import tkinter as tk
 
-from pyxida_downloader import *
-from pyxida_scraper import *
+from src.pyxida_downloader import *
+from src.pyxida_scraper import *
 
 
 def about_window():

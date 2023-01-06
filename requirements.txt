@@ -1,7 +1,6 @@
-pyinstaller
-tk
-future
 requests
 beautifulsoup4
 lxml
+tk
+pyinstaller
 cx_Freeze

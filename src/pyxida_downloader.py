@@ -2,8 +2,8 @@ import os
 
 import requests
 
-output_path = '../output\\'
-txt_path = 'txt\\'
+from src.constants import *
+
 
 # department = 1  # Τμήμα Πληροφορικής / Department of Informatics
 # department = 2  # Τμήμα Στατιστικής / Department of Statistics
