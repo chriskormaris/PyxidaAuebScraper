@@ -8,10 +8,14 @@ def about_window():
     window = tk.Toplevel(root)
     # change title
     window.wm_title('About')
-    creator = tk.Label(window, text='© Created by Christos Kormaris')
+    creator = tk.Label(window, text=f'© Created by {author}')
     creator.pack()
+
     date = tk.Label(window, text='Athens, March 2018')
     date.pack()
+
+    version_label = tk.Label(window, text=f'Version: {version}')
+    version_label.pack()
 
     # change icon
     window.iconbitmap(img_path + 'info.ico')

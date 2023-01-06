@@ -132,8 +132,7 @@ def pyxida_scraper(department=1, phd_or_msc='phd'):
     thesis_links = []
 
     for i in range(1, pages + 1):
-
-        current_url = base_url + middle_url + str(i)
+        current_url = pyxida_base_url + middle_url + str(i)
         source = requests.get(current_url).text
         soup = bs.BeautifulSoup(source, 'lxml')
 
@@ -145,7 +144,7 @@ def pyxida_scraper(department=1, phd_or_msc='phd'):
                     thesis_links.append(url.get('href'))
                     # print(url.get('href'))
                 else:
-                    thesis_links.append(base_url + url.get('href'))
+                    thesis_links.append(pyxida_base_url + url.get('href'))
                     # print(prefix + url.get('href'))
 
     pdf_links = []
@@ -184,8 +183,8 @@ def pyxida_scraper(department=1, phd_or_msc='phd'):
         # get the ".pdf" link
         for url in (soup.find_all('a')):
             if 'pdf' in url.get('href').lower():
-                pdf_links.append(base_url + url.get('href'))
-                print(base_url + url.get('href'))
+                pdf_links.append(pyxida_base_url + url.get('href'))
+                print(pyxida_base_url + url.get('href'))
 
                 pdf_filenames.append(url.contents[0])
 
