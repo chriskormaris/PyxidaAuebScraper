@@ -36,7 +36,7 @@ def center(win):
     height = win.winfo_height()
     x = (win.winfo_screenwidth() // 2) - (width // 2)
     y = (win.winfo_screenheight() // 2) - (height // 2)
-    win.geometry('{}x{}+{}+{}'.format(width, height, x, y))
+    win.geometry(f'{width}x{height}+{x}+{y}')
 
 
 if __name__ == '__main__':
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     root.title('Pyxida AUEB Scraper & Downloader')
 
     # change window size
-    root.geometry("800x600")
+    root.geometry('800x600')
 
     # change icon
     root.iconbitmap(img_path + 'compass.ico')
@@ -70,7 +70,7 @@ if __name__ == '__main__':
     phd_or_msc_frame = tk.Frame(root)
     buttons_frame = tk.Frame(root)
 
-    department_var = tk.StringVar(departments_frame, '1')
+    department_var = tk.IntVar(departments_frame, 1)
     phd_or_msc_var = tk.StringVar(phd_or_msc_frame, 'phd')
 
     # 1. departments_frame widgets #
@@ -115,7 +115,7 @@ if __name__ == '__main__':
         bg='#458BAB',
         height=2,
         width=12,
-        command=lambda: pyxida_scraper(int(department_var.get()), phd_or_msc_var.get())
+        command=lambda: pyxida_scraper(department_var.get(), phd_or_msc_var.get())
     )
     run_scraper_button.pack(side=tk.TOP)
 
@@ -129,7 +129,7 @@ if __name__ == '__main__':
         bg='#458BAB',
         height=2,
         width=12,
-        command=lambda: pyxida_downloader(int(department_var.get()), phd_or_msc_var.get())
+        command=lambda: pyxida_downloader(department_var.get(), phd_or_msc_var.get())
     )
     runDownloaderButton.pack(side=tk.BOTTOM)
 
