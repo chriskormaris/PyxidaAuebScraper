@@ -20,7 +20,7 @@ def about_window():
     # change icon
     window.iconbitmap(img_path + 'info.ico')
 
-    window.geometry('300x100')
+    window.geometry('300x120')
     window.resizable(False, False)
 
     ok_button = tk.Button(window, text='Ok', fg='white', bg='#458BAB', height=2, width=6, command=window.destroy)
@@ -138,6 +138,10 @@ if __name__ == '__main__':
     # Menus #
     menu = tk.Menu(root)
     root.config(menu=menu)
+
+    fileMenu = tk.Menu(menu, tearoff=False)
+    menu.add_cascade(label='File', menu=fileMenu)  # adds drop-down menu
+    fileMenu.add_command(label='Exit', command=root.destroy)
 
     aboutMenu = tk.Menu(menu, tearoff=False)
     menu.add_cascade(label='About', menu=aboutMenu)  # adds drop-down menu
