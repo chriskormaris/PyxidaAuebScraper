@@ -143,9 +143,9 @@ if __name__ == '__main__':
     menu.add_cascade(label='File', menu=fileMenu)  # adds drop-down menu
     fileMenu.add_command(label='Exit', command=root.destroy)
 
-    aboutMenu = tk.Menu(menu, tearoff=False)
-    menu.add_cascade(label='About', menu=aboutMenu)  # adds drop-down menu
-    aboutMenu.add_command(label='About', command=about_window)
+    helpMenu = tk.Menu(menu, tearoff=False)
+    menu.add_cascade(label='Help', menu=helpMenu)  # adds drop-down menu
+    helpMenu.add_command(label='About', command=about_window)
 
     center(root)
     root.mainloop()
