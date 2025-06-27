@@ -1,0 +1,49 @@
+Unconventional technologies for malware delivery and efficient defense methods in resource-constrained environments
+Μέθοδοι βελτίωσης αποτελεσμάτων αναζήτησης στον παγκόσμιο ιστό
+Resource allocation, content recommendations and online learning mechanisms for mobile edge computing
+The contribution of experiential and material purchases to happiness: expanding the experience recommendation
+Federated, continual and meta-learning algorithms for multi-task settings
+Accelerating geometric queries for computer graphics: algorithms, techniques and applications
+Photorealistic simulation and optimization of lighting conditions
+Algorithmic and game-theoretic aspects of computational social choice
+Fast and efficient predictions in Big Data systems
+Marketing communication strategies and consumer response to corporate social irresponsibility: the role of tight and loose cultures
+Increasing security and resilience in cyber-physical processes of critical infrastructures
+Deep neural networks for biomedical question answering
+Design and analysis of auction mechanisms: algorithms and incentives
+Urban data analytics and applications in the Big Data era
+Mechanisms and policies for resource allocation in clouds and next generation networks
+Spectral analysis and preconditioned iterative solvers for large structured linear systems
+Quality of musicians' experience in network music performance
+Developing resilience and cyber-physical protection capabilities  for critical aviation infrastructures
+Deep neural networks for information mining from legal texts
+Organisational energy conservation behaviour &amp; the effect of motivational information systems and gamification on employees’ energy saving
+Research on economic mechanisms and incentives for technologies of future Internet
+Effective methods to tackle the equivalent mutant problem when testing software with mutation
+Multicast forwarding in future Information-Centric network architectures
+Εννοιολογική ανάκτηση από FDB βάσεις δεδομένων
+Fighting an unfair battle: unconventional defenses against Advanced Persistent Threats
+Securing critical infrastructures at software and interdependency levels
+Μελέτη του Παγκόσμιου ιστού με χρήση θεωρίας Οικονομικών και Παιγνίων
+Equilibrium and Optimal Control Policies for Queueing Models with Variable Service Capacity
+Algorithmic problems in power management of computing systems
+Aspect Based Sentiment Analysis
+Research on economic mechanisms and incentives for technologies of future internet
+Efficient texture representation and sampling algorithms for real-time rendering
+Πρόληψη του spam στη διαδικτυακή τηλεφωνία μέσω πολιτικών ασφάλειας και ηχητικών CAPTCHA
+Κατανομή ροών κίνησης σε ασύρματους σταθμούς με πολλαπλές ενεργές δικτυακές διεπαφές
+Linear and non linear dimensionality reduction for distributed knowledge discovery
+Μοντέλο δεδομένων για δυναμικά εξελισσόμενα περιβάλλοντα βάσεων δεδομένων
+Techniques and systems for online and distributed database processing
+Ικανές συνθήκες για την ύπαρξη υπογραφημάτων με καθορισμένη δομή σε ειδικές κατηγορίες γραφημάτων
+Προσδιορισμός βελτιωμένων μοντέλων χωροθέτησης - κάλυψης με εξερεύνηση των δυνατοτήτων των Γεωγραφικών Συστημάτων Πληροφοριών
+Using clustering to aid text classiffcation of single-labelled datasets
+Εφαρμοσμένη επιχειρησιακή έρευνα στην πληροφορική: παιγνιοθεωρητικά υποδείγματα για δίκτυα χρηστών του διαδικτύου
+Word sense disambiguation and text relatedness based on word thesauri
+Stability of spectral learning algorithms: theory, methodologies and applications
+Energy efficient and adaptive service advertisement, discovery and provision for Mobile Ad Hoc Networks
+Πλαίσιο διαχείρισης κατανεμημένων συστημάτων και υπηρεσιών βασισμένο σε τεχνολογίες ιστού: εφαρμογή στην περίπτωση των δικτύων διανομής περιεχομένου
+Organizing and Searching Data in Unstructured P2P Networks
+Απόδοση δικτυακών πόρων μέσω οικονομικών μηχανισμών δημοπρασιών
+Οικονομική μοντελοποίηση και μηχανισμοί κινήτρων για την αποδοτική παροχή πόρων σε συστήματα ομότιμων οντοτήτων
+Η συμβολή οργανωσιακών εικόνων ασφαλείας πληροφοριακού συστήματος στην υλοποίηση ασφαλών πληροφοριακών συστημάτων

@@ -52,7 +52,6 @@ if __name__ == '__main__':
     # change icon
     root.iconbitmap(img_path + 'compass.ico')
 
-    departments = [1, 2, 3, 4, 5, 6, 7, 8]
     department_names = [
         'Department of Informatics',
         'Department of Statistics',
@@ -76,13 +75,13 @@ if __name__ == '__main__':
     # 1. departments_frame widgets #
     departments_label = tk.Label(departments_frame, text='Department: ')
     departments_label.pack()
-    for i in range(len(departments)):
+    for i in range(len(department_names)):
         tk.Radiobutton(
             departments_frame,
             text=department_names[i],
             padx=2,
             variable=department_var,
-            value=departments[i]
+            value=i + 1
         ).pack(anchor=tk.CENTER)
 
     empty_line_label = tk.Label(departments_frame, text="\n")

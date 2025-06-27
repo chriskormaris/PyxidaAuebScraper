@@ -100,6 +100,5 @@ ENV/
 # mypy
 .mypy_cache/
 
-# added by use
+# added by user
 .pdf
-output/

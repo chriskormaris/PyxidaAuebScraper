@@ -1,7 +1,7 @@
-version = '1.1.0'
+version = '2.0.0'
 author = 'Christos Kormaris'
 
 img_path = 'img\\'
-output_path = 'output\\'
+pdfs_path = 'pdfs\\'
 txt_path = 'txt\\'
-pyxida_base_url = 'http://www.pyxida.aueb.gr/'
+pyxida_base_url = 'https://www.pyxida.aueb.gr'
