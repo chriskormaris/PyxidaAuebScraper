@@ -15,50 +15,50 @@ def is_english(s):
         return True
 
 
-def pyxida_scraper(department=1, phd_or_msc='phd'):
+def pyxida_scraper(department=1, phd_or_msc='phd', txt_path=txt_path):
     directory = txt_path
     if department == 1:  # Τμήμα Πληροφορικής / Department of Informatics
         if phd_or_msc.lower() == 'phd':
             middle_url = '/collections/a85735e2-7304-4ca6-ab61-f216fa9a6f97'
         else:
             middle_url = '/collections/8e06e33f-4257-40ab-9ba2-b2a3739c14d0'
-        directory += 'di'
+        directory = os.path.join(directory, 'di')
     elif department == 2:  # Τμήμα Στατιστικής / Department of Statistics
         if phd_or_msc.lower() == 'phd':
             middle_url = '/collections/a85735e2-7304-4ca6-ab61-f216fa9a6f97?cp.page'
         else:
             middle_url = '/collections/8e06e33f-4257-40ab-9ba2-b2a3739c14d0'
-        directory += 'ds'
+        directory = os.path.join(directory, 'ds')
     elif department == 3:  # Τμήμα Οργάνωσης και Διοίκησης Επιχειρήσεων / Department of Business Administration
         if phd_or_msc.lower() == 'phd':
             middle_url = '/collections/b206877a-02e4-4feb-bc53-e7ee95b6ea75'
         else:
             middle_url = '/collections/e402ac94-d8e1-45f7-906e-6a55bb0553ed'
-        directory += 'dba'
+        directory = os.path.join(directory, 'dba')
     elif department == 4:  # Τμήμα Λογιστικής και Χρηματοοικονομικής / Department of Accounting and Finance
         if phd_or_msc.lower() == 'phd':
             middle_url = '/collections/ad63fba0-cb3e-460f-97d1-84f4b62d34ee'
         else:
             middle_url = '/collections/0981f406-0cf6-48ae-8d9f-021762e54a87'
-        directory += 'daf'
+        directory = os.path.join(directory, 'daf')
     elif department == 5:  # Τμήμα Επικοινωνίας και Μάρκετινγκ / Department of Marketing and Communication
         if phd_or_msc.lower() == 'phd':
             middle_url = '/collections/a15c9c65-c5f9-4908-a8ec-86ecaa463551'
         else:
             middle_url = '/collections/4f95cb1e-bbd4-4648-8620-5e9a7381a42f'
-        directory += 'dmc'
+        directory = os.path.join(directory, 'dmc')
     elif department == 6:  # Τμήμα Διοικητικής Επιστήμης και Τεχνολογίας / Department of Management Science and Technology
         if phd_or_msc.lower() == 'phd':
             middle_url = '/collections/15f5c7d0-399b-4bf4-af65-a2d9c3abea98'
         else:
             middle_url = '/collections/d2816650-ab95-44ea-90e1-aa7eacf7f9ee'
-        directory += 'dmst'
+        directory = os.path.join(directory, 'dmst')
     elif department == 7:  # Τμήμα Οικονομικής Επιστήμης / Department of Economics
         if phd_or_msc.lower() == 'phd':
             middle_url = '/collections/393f596b-20a3-48d4-803b-c3496735891a'
         else:
             middle_url = '/collections/b2e20db7-04b1-4193-8b82-62f800341cf0'
-        directory += 'de'
+        directory = os.path.join(directory, 'de')
     # Τμήμα Διεθνών και Ευρωπαϊκών Οικονομικών Σπουδών /
     # Department of International and European Economic Studies
     else:
@@ -66,13 +66,13 @@ def pyxida_scraper(department=1, phd_or_msc='phd'):
             middle_url = '/collections/bacd9636-439e-4652-810e-daf0781ccfb8'
         else:
             middle_url = '/collections/d3ce98d2-1f19-487e-bb47-7d671b613c1c'
-        directory += 'diees'
-    directory += '_' + phd_or_msc.lower() + '_dissertations\\'
+        directory = os.path.join(directory, 'diees')
+    directory += '_' + phd_or_msc.lower() + '_dissertations'
 
-    links_file = directory + 'links.txt'
-    pdfs_file = directory + 'filenames.txt'
-    authors_file = directory + 'authors.txt'
-    titles_file = directory + 'titles.txt'
+    links_file = os.path.join(directory, 'links.txt')
+    pdfs_file = os.path.join(directory, 'filenames.txt')
+    authors_file = os.path.join(directory, 'authors.txt')
+    titles_file = os.path.join(directory, 'titles.txt')
 
     thesis_links = []
 
@@ -187,4 +187,4 @@ def pyxida_scraper(department=1, phd_or_msc='phd'):
 
 
 if __name__ == '__main__':
-    pyxida_scraper(department=1, phd_or_msc='phd')
+    pyxida_scraper(department=1, phd_or_msc='phd', txt_path=os.path.join('..', txt_path))

@@ -1,5 +1,7 @@
-import cx_Freeze
+import os
 import sys
+
+import cx_Freeze
 
 from src.constants import *
 
@@ -10,8 +12,8 @@ if sys.platform == 'win64':
 elif sys.platform == 'win32':
     base = 'Win32GUI'
 
-executables = [cx_Freeze.Executable('pyxida_gui.py', base=base, icon=img_path + 'compass.ico')]
-include_files = [img_path + x for x in ['compass.ico', 'info.ico']]
+executables = [cx_Freeze.Executable('pyxida_gui.py', base=base, icon=os.path.join(img_path, 'compass.ico'))]
+include_files = [img_path + '\\' + file for file in ['compass.ico', 'info.ico']]
 includes = []
 excludes = ['tk']
 packages = []

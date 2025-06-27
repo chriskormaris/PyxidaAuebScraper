@@ -18,7 +18,7 @@ def about_window():
     version_label.pack()
 
     # change icon
-    window.iconbitmap(img_path + 'info.ico')
+    window.iconbitmap(os.path.join(img_path, 'info.ico'))
 
     window.geometry('300x120')
     window.resizable(False, False)
@@ -40,8 +40,6 @@ def center(win):
 
 
 if __name__ == '__main__':
-    img_path = 'img\\'
-
     # create window and set title
     root = tk.Tk()
     root.title('Pyxida AUEB Scraper & Downloader')
@@ -50,7 +48,7 @@ if __name__ == '__main__':
     root.geometry('800x600')
 
     # change icon
-    root.iconbitmap(img_path + 'compass.ico')
+    root.iconbitmap(os.path.join(img_path, 'compass.ico'))
 
     department_names = [
         'Department of Informatics',
@@ -89,7 +87,7 @@ if __name__ == '__main__':
 
     departments_frame.pack()
 
-    # 2. phd_or_msc_label widgets #
+    # 2. phd_or_msc_frame widgets #
     phd_or_msc_label = tk.Label(phd_or_msc_frame, text='PhD or MSc: ')
     phd_or_msc_label.pack()
     for value in phd_or_msc:
