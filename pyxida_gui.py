@@ -119,7 +119,7 @@ if __name__ == '__main__':
     empty_line_label = tk.Label(buttons_frame, text="\r")
     empty_line_label.pack()
 
-    runDownloaderButton = tk.Button(
+    run_downloader_button = tk.Button(
         buttons_frame,
         text='Run Downloader',
         fg='white',
@@ -128,7 +128,7 @@ if __name__ == '__main__':
         width=12,
         command=lambda: pyxida_downloader(department_var.get(), phd_or_msc_var.get())
     )
-    runDownloaderButton.pack(side=tk.BOTTOM)
+    run_downloader_button.pack(side=tk.BOTTOM)
 
     buttons_frame.pack()
 
@@ -136,13 +136,13 @@ if __name__ == '__main__':
     menu = tk.Menu(root)
     root.config(menu=menu)
 
-    fileMenu = tk.Menu(menu, tearoff=False)
-    menu.add_cascade(label='File', menu=fileMenu)  # adds drop-down menu
-    fileMenu.add_command(label='Exit', command=root.destroy)
+    file_menu = tk.Menu(menu, tearoff=False)
+    menu.add_cascade(label='File', menu=file_menu)  # adds drop-down menu
+    file_menu.add_command(label='Exit', command=root.destroy)
 
-    helpMenu = tk.Menu(menu, tearoff=False)
-    menu.add_cascade(label='Help', menu=helpMenu)  # adds drop-down menu
-    helpMenu.add_command(label='About', command=about_window)
+    help_menu = tk.Menu(menu, tearoff=False)
+    menu.add_cascade(label='Help', menu=help_menu)  # adds drop-down menu
+    help_menu.add_command(label='About', command=about_window)
 
     center(root)
     root.mainloop()
